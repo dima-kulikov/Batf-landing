@@ -1,0 +1,40 @@
+.button {
+  position: relative;
+  outline: none;
+  overflow: hidden;
+  font: 700 16px/24px $fontBold;
+  background-color: $secondary;
+  color: $light;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 16px 0;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+
+  @include transition;
+
+  @include hover {
+    outline: none;
+    cursor: pointer;
+    background-color: rgba(70, 207, 23);
+  }
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+
+  @include _768 {
+    max-width: 220px;
+  }
+}
+
+.button[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+  background-color: rgba($dark, 0.5);
+  box-shadow: 4px 4px 0 rgba($dark, 0.5);
+}

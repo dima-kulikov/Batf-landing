@@ -1,0 +1,159 @@
+.footer {
+  background: #0b0d13;
+  padding: 12px 12px 48px;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+
+  @include _540 {
+    padding-bottom: 60px;
+  }
+  @include _768 {
+    padding: 16px 16px 60px;
+  }
+
+  @include _1024 {
+    padding: 16px 24px 60px;
+  }
+
+  @include _1440 {
+    padding: 16px auto 60px;
+  }
+
+  &__wrapper {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    include _768 {
+      gap: 20px;
+    }
+    @include _1440 {
+      max-width: 1344px;
+    }
+    @include _1920 {
+      max-width: 1246px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    column-gap: 16px;
+    margin-bottom: 20px;
+  }
+
+  &__nav {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    column-gap: 36px;
+    row-gap: 24px;
+
+    &-logo {
+      display: flex;
+      width: 100%;
+      gap: 8px;
+
+      flex-direction: column;
+      @include _1024 {
+        width: max-content;
+        margin-right: 64px;
+      }
+
+      img {
+        width: 115px;
+      }
+
+      p {
+        font: 400 11px/16px $fontRegular;
+      }
+    }
+
+    &-menu {
+      @include _768 {
+        margin-right: auto;
+      }
+
+      h4 {
+        margin-bottom: 8px;
+        text-transform: uppercase;
+        font: 700 14px/20px $fontBold;
+      }
+
+      ul {
+        display: flex;
+        max-width: 200px;
+        flex-direction: column;
+        gap: 8px;
+        list-style-type: none;
+        padding: 0;
+      }
+      li a {
+        display: flex;
+        gap: 4px;
+        align-items: center;
+      }
+
+      &-icon {
+        transition: all 0.3s linear;
+      }
+      li:hover &-icon {
+        fill: $light;
+      }
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__desc {
+    font: 400 11px/16px $fontRegular;
+    color: $light;
+  }
+
+  &__copyright {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    @include _540 {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    img {
+      max-width: 100px;
+      min-width: 100px;
+    }
+
+    &-block {
+      display: flex;
+      gap: 16px;
+
+      a {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    &-age {
+      width: 44px;
+      height: 44px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #191f2e;
+      border-radius: 8px;
+    }
+
+    &-text {
+      font: 400 14px/20px $fontRegular;
+    }
+  }
+}

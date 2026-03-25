@@ -1,0 +1,11 @@
+.link {
+  position: relative;
+  text-decoration: none;
+  font: 600 12px/16px $fontSemibold;
+  color: #afb7ca;
+
+  @include transition();
+  @include hover {
+    color: $light;
+  }
+}

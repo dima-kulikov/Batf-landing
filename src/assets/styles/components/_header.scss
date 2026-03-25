@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 12px;
+  @include _540 {
+    margin-top: 32px;
+  }
+  @include _1440 {
+    margin-top: 76px;
+  }
+  img {
+    width: 332px;
+    padding: 0 16px;
+  }
+}
